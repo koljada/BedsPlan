@@ -28,9 +28,9 @@ namespace BedsPlan
         /// </summary>
         private void InternalStartup()
         {
-            this.show.Click += new System.EventHandler(this.show_Click);
-            this.delete.Click += new System.EventHandler(this.delete_Click);
-            this.print.Click += new System.EventHandler(this.print_Click);
+            show.Click += new EventHandler(show_Click);
+            delete.Click += new EventHandler(delete_Click);
+            print.Click += new EventHandler(print_Click);
 
         }
 
@@ -116,8 +116,8 @@ namespace BedsPlan
         private void print_Click(object sender, EventArgs e)
         {
             int range = 23;
-            var t = (this.Columns["N"].Cells.Value as Array).OfType<int>();
             List<Bed> beds = new List<Bed>();
+            Globals.Result.Range["A1:I999"].Cells.Clear();
             foreach (Range row in UsedRange.Rows)
             {
                 if (!string.IsNullOrEmpty(row.Cells[1, 14].Text) && row.Cells[1, 14].Text != "№ прихода")

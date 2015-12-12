@@ -161,10 +161,10 @@ namespace BedsPlan
             this.radioButton8.Location = new System.Drawing.Point(18, 24);
             this.radioButton8.Margin = new System.Windows.Forms.Padding(4);
             this.radioButton8.Name = "radioButton8";
-            this.radioButton8.Size = new System.Drawing.Size(76, 21);
+            this.radioButton8.Size = new System.Drawing.Size(79, 21);
             this.radioButton8.TabIndex = 2;
             this.radioButton8.TabStop = true;
-            this.radioButton8.Text = "Максим";
+            this.radioButton8.Text = "Евгений";
             this.radioButton8.UseVisualStyleBackColor = true;
             // 
             // radioButton7

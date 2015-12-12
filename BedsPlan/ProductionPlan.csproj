@@ -21,7 +21,7 @@
     <PublishUrl>C:\Users\Roman\OneDrive\Documents\Beds\</PublishUrl>
     <InstallUrl />
     <TargetCulture>en</TargetCulture>
-    <ApplicationVersion>1.0.0.14</ApplicationVersion>
+    <ApplicationVersion>1.0.0.15</ApplicationVersion>
     <AutoIncrementApplicationRevision>true</AutoIncrementApplicationRevision>
     <UpdateEnabled>true</UpdateEnabled>
     <UpdateInterval>7</UpdateInterval>
@@ -246,9 +246,9 @@
         <Host Name="Excel Document" Path=".\BedsPlan.xlsx" GeneratedCodeNamespace="BedsPlan" PublishedHash="D82CCEEF92817B2539792AE4AEB203CC79ABD5D2">
           <HostItem Name="Лист2" Code="Beds.cs" CanonicalName="Лист2" PublishedHash="D066CA364A84E4ED7C27033F4DFF1B9AF2B7288B" DisplayName="Beds" Blueprint="Beds.Designer.xml" GeneratedCode="Beds.Designer.cs" />
           <HostItem Name="Лист1" Code="Plan.cs" CanonicalName="Лист1" PublishedHash="042F97531DD0621264417CA518D5883FA48ED58B" DisplayName="Plan" Blueprint="Plan.Designer.xml" GeneratedCode="Plan.Designer.cs" />
+          <HostItem Name="Лист4" Code="Result.cs" CanonicalName="Лист4" PublishedHash="2D279D5AB104263B0B4F52764D7BE72A2ACE3067" DisplayName="Result" Blueprint="Result.Designer.xml" GeneratedCode="Result.Designer.cs" />
+          <HostItem Name="Лист3" Code="ResultTemplate.cs" CanonicalName="Лист3" PublishedHash="1241E1CE31963C0FFAA66BACC1C25D49F07D9EA5" CanActivate="false" DisplayName="ResultTemplate" Blueprint="ResultTemplate.Designer.xml" GeneratedCode="ResultTemplate.Designer.cs" />
           <HostItem Name="ThisWorkbook" Code="ThisWorkbook.cs" CanonicalName="ThisWorkbook" PublishedHash="10FC6BDF297ED18B12C56D1B022559A62854546F" Blueprint="ThisWorkbook.Designer.xml" GeneratedCode="ThisWorkbook.Designer.cs" />
-          <HostItem Name="Лист3" Code="ResultTemplate.cs" CanonicalName="Лист3" CanActivate="false" DisplayName="ResultTemplate" Blueprint="ResultTemplate.Designer.xml" GeneratedCode="ResultTemplate.Designer.cs" PublishedHash="1241E1CE31963C0FFAA66BACC1C25D49F07D9EA5" />
-          <HostItem Name="Лист4" Code="Result.cs" CanonicalName="Лист4" DisplayName="Result" Blueprint="Result.Designer.xml" GeneratedCode="Result.Designer.cs" PublishedHash="2D279D5AB104263B0B4F52764D7BE72A2ACE3067" />
         </Host>
       </FlavorProperties>
     </VisualStudio>

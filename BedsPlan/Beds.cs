@@ -6,12 +6,10 @@ namespace BedsPlan
     public partial class Beds
     {
         private void Лист2_Startup(object sender, EventArgs e)
-        {
-        }
+        { }
 
         private void Лист2_Shutdown(object sender, EventArgs e)
-        {
-        }
+        { }
 
         #region VSTO Designer generated code
 
