@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 using Microsoft.Office.Interop.Excel;
-using Office = Microsoft.Office.Core;
 using System.Text;
-using Nistoc.Net.Extentions;
 using System.Resources;
 using System.Reflection;
+using Number2Words;
 
 namespace BedsPlan
 {
@@ -31,7 +30,6 @@ namespace BedsPlan
             show.Click += new EventHandler(show_Click);
             delete.Click += new EventHandler(delete_Click);
             print.Click += new EventHandler(print_Click);
-
         }
 
         #endregion
@@ -47,7 +45,7 @@ namespace BedsPlan
             var btn = MessageBoxButtons.YesNo;
             if (MessageBox.Show("Очистить данные?", "Предупреждение", btn) == DialogResult.Yes)
             {
-                for (var i = 3; i < 999; i += 21)
+                for (var i = 3; i < 1500; i += 21)
                 {
                     Range["A" + i + ":N" + (i + 19)].Cells.ClearContents();
                 }
@@ -142,11 +140,13 @@ namespace BedsPlan
                 }
                 d.Cells[19, 7].Formula = "=SUM(G" + (rowNumber + 7) + ":G" + (rowNumber + 17) + ")";
                 this.Evaluate(d.Cells[19, 7]);
-                string f = d.Cells[19, 7].Text;
-                d.Cells[19, 2] = f.MoneyToWord();
+                string sum = d.Cells[19, 7].Text;
+                d.Cells[19, 2] = RussianNumberToWordsConverter.Convert(int.Parse(sum), GrammaticalGender.Feminine);
             }
             Globals.Result.Activate();
         }
 
     }
+
+    
 }

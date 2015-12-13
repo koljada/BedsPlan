@@ -21,7 +21,7 @@
     <PublishUrl>C:\Users\Roman\OneDrive\Documents\Beds\</PublishUrl>
     <InstallUrl />
     <TargetCulture>en</TargetCulture>
-    <ApplicationVersion>1.0.0.15</ApplicationVersion>
+    <ApplicationVersion>1.0.0.18</ApplicationVersion>
     <AutoIncrementApplicationRevision>true</AutoIncrementApplicationRevision>
     <UpdateEnabled>true</UpdateEnabled>
     <UpdateInterval>7</UpdateInterval>
@@ -83,10 +83,6 @@
     This section specifies references for the project.
   -->
   <ItemGroup>
-    <Reference Include="Nistoc.Net.Extentions, Version=2.1.4296.30673, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MoneyToWords.2.2.2\lib\net40\Nistoc.Net.Extentions.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -223,6 +219,12 @@
     <None Include="Result.Designer.xml">
       <DependentUpon>Result.cs</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Number2Words\Number2Words.csproj">
+      <Project>{e8819c2f-21f1-4248-a012-59d44c4ae5f2}</Project>
+      <Name>Number2Words</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
