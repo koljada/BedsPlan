@@ -90,10 +90,10 @@ namespace BedsPlan
             Globals.Plan.Cells[last, 2] = int.Parse(widths.Text);
             Globals.Plan.Cells[last, 3] = int.Parse(heights.Text);
             Globals.Plan.Cells[last, 4] = count.Value;
-            Globals.Plan.Cells[last, 5] = colors.Text;
-            Globals.Plan.Cells[last, 6] = hasBox.Checked ? "ящ" : "0";
-            Globals.Plan.Cells[last, 7] = hasDivider.Checked ? "пер" :"0";
-            Globals.Plan.Cells[last, 8] = hasLamel.Checked ? "усл" : "0";
+            Globals.Plan.Cells[last, 5] = colors.Text.Trim();
+            Globals.Plan.Cells[last, 7] = hasBox.Checked ? "ящ" : "0";
+            Globals.Plan.Cells[last, 8] = hasDivider.Checked ? "пер" :"0";
+            Globals.Plan.Cells[last, 6] = hasLamel.Checked ? "усл" : "0";
             Globals.Plan.Cells[last, 9] = conditions.Text;
             Globals.Plan.Cells[last, 10] = deadline.Value.Date;
             Globals.Plan.Cells[last, 13] =

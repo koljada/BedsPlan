@@ -7,6 +7,7 @@ using System.Text;
 using System.Resources;
 using System.Reflection;
 using Number2Words;
+using System.Data;
 
 namespace BedsPlan
 {
@@ -27,9 +28,11 @@ namespace BedsPlan
         /// </summary>
         private void InternalStartup()
         {
-            show.Click += new EventHandler(show_Click);
-            delete.Click += new EventHandler(delete_Click);
-            print.Click += new EventHandler(print_Click);
+            this.show.Click += new System.EventHandler(this.show_Click);
+            this.delete.Click += new System.EventHandler(this.delete_Click);
+            this.print.Click += new System.EventHandler(this.print_Click);
+            this.printPlan.Click += new System.EventHandler(this.printPlan_Click);
+
         }
 
         #endregion
@@ -106,8 +109,7 @@ namespace BedsPlan
                 DueDate = row.Cells[1, 10].Value,
                 MadeDate = row.Cells[1, 11].Text,
                 TransferDate = row.Cells[1, 12].Text.Trim(),
-                Responsible = row.Cells[1, 13].Text,
-                Number = (int)(row.Cells[1, 14].Value)
+                Responsible = row.Cells[1, 13].Text
             };
         }
 
@@ -118,21 +120,20 @@ namespace BedsPlan
             Globals.Result.Range["A1:I999"].Cells.Clear();
             foreach (Range row in UsedRange.Rows)
             {
-                if (!string.IsNullOrEmpty(row.Cells[1, 14].Text) && row.Cells[1, 14].Text != "№ прихода")
+                if (!string.IsNullOrEmpty(row.Cells[1, 12].Text) && row.Cells[1, 14].Text != "№ прихода")
                 {
                     Bed bed = Convert(row);
                     beds.Add(bed);
                 }
             }
-            var y = beds.GroupBy(x => new { x.Number, x.TransferDate }).ToList();
+            var y = beds.GroupBy(x => x.TransferDate).ToList();
             for (int i = 1; i <= y.Count(); i++)
             {
                 int rowNumber = (i - 1) * range + 1;
                 string st = "A" + rowNumber + ":G" + (i * range);
                 var d = Globals.Result.Range[st];
                 Globals.ResultTemplate.Range["A1:G23"].Copy(d);
-                d.Cells[4, 2] = y[i - 1].Key.Number;
-                d.Cells[5, 5] = y[i - 1].Key.TransferDate;
+                d.Cells[5, 5] = y[i - 1].Key;
                 for (int j = 0; j < y[i - 1].Count(); j++)
                 {
                     d.Cells[j + 8, 1].Value = y[i - 1].ToArray()[j].ToString();
@@ -146,7 +147,23 @@ namespace BedsPlan
             Globals.Result.Activate();
         }
 
+        private void printPlan_Click(object sender, EventArgs e)
+        {
+            int count = 3;
+            foreach (Range item in UsedRange.Rows)
+            {
+                if (!string.IsNullOrEmpty(item.Cells[1, 3].Text))
+                {
+                    var copyTo = Globals.PlanToPrint.Range["A" + count + ":N" + count];
+                    item.Copy(copyTo);
+                    Globals.PlanToPrint.Cells[count, 4] = item.Cells[1, 4].Text;
+                    count++;
+                }
+            }
+            Globals.ThisWorkbook.Save();
+            Globals.PlanToPrint.Activate();
+        }
     }
 
-    
+
 }

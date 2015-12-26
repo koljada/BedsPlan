@@ -13,26 +13,18 @@ namespace BedsPlan {
     
     
     /// 
-    [Microsoft.VisualStudio.Tools.Applications.Runtime.StartupObjectAttribute(2)]
+    [Microsoft.VisualStudio.Tools.Applications.Runtime.StartupObjectAttribute(3)]
     [global::System.Security.Permissions.PermissionSetAttribute(global::System.Security.Permissions.SecurityAction.Demand, Name="FullTrust")]
-    public sealed partial class Plan : Microsoft.Office.Tools.Excel.WorksheetBase {
+    public sealed partial class PlanToPrint : Microsoft.Office.Tools.Excel.WorksheetBase {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "14.0.0.0")]
         private global::System.Object missing = global::System.Type.Missing;
         
-        internal Microsoft.Office.Tools.Excel.Controls.Button show;
-        
-        internal Microsoft.Office.Tools.Excel.Controls.Button delete;
-        
-        internal Microsoft.Office.Tools.Excel.Controls.Button print;
-        
-        internal Microsoft.Office.Tools.Excel.Controls.Button printPlan;
-        
         /// 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
-        public Plan(global::Microsoft.Office.Tools.Excel.Factory factory, global::System.IServiceProvider serviceProvider) : 
-                base(factory, serviceProvider, "Лист1", "Лист1") {
+        public PlanToPrint(global::Microsoft.Office.Tools.Excel.Factory factory, global::System.IServiceProvider serviceProvider) : 
+                base(factory, serviceProvider, "Лист5", "Лист5") {
         }
         
         /// 
@@ -41,7 +33,7 @@ namespace BedsPlan {
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
         protected override void Initialize() {
             base.Initialize();
-            Globals.Plan = this;
+            Globals.PlanToPrint = this;
             global::System.Windows.Forms.Application.EnableVisualStyles();
             this.InitializeCachedData();
             this.InitializeControls();
@@ -137,10 +129,6 @@ namespace BedsPlan {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "14.0.0.0")]
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
         private void InitializeControls() {
-            this.show = new Microsoft.Office.Tools.Excel.Controls.Button(Globals.Factory, this.ItemProvider, this.HostContext, "1F0C583D81DEED142B9198CA1311A549F9BB31", "1F0C583D81DEED142B9198CA1311A549F9BB31", this, "show");
-            this.delete = new Microsoft.Office.Tools.Excel.Controls.Button(Globals.Factory, this.ItemProvider, this.HostContext, "2D2196ED029D562476C28D4D2E3FA832FB6352", "2D2196ED029D562476C28D4D2E3FA832FB6352", this, "delete");
-            this.print = new Microsoft.Office.Tools.Excel.Controls.Button(Globals.Factory, this.ItemProvider, this.HostContext, "36B26063B3EBEA3459D3B8BD3D48F181BF1D33", "36B26063B3EBEA3459D3B8BD3D48F181BF1D33", this, "print");
-            this.printPlan = new Microsoft.Office.Tools.Excel.Controls.Button(Globals.Factory, this.ItemProvider, this.HostContext, "4A5B185774D4C644D5B49C69418967FF8CC444", "4A5B185774D4C644D5B49C69418967FF8CC444", this, "printPlan");
         }
         
         /// 
@@ -148,42 +136,6 @@ namespace BedsPlan {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "14.0.0.0")]
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
         private void InitializeComponents() {
-            // 
-            // show
-            // 
-            this.show.BackColor = System.Drawing.SystemColors.Control;
-            this.show.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.show.Name = "show";
-            this.show.Text = "Показать форму";
-            this.show.UseVisualStyleBackColor = false;
-            // 
-            // delete
-            // 
-            this.delete.BackColor = System.Drawing.SystemColors.Control;
-            this.delete.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.delete.Name = "delete";
-            this.delete.Text = "Очистить";
-            this.delete.UseVisualStyleBackColor = false;
-            // 
-            // print
-            // 
-            this.print.BackColor = System.Drawing.SystemColors.Control;
-            this.print.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.print.Name = "print";
-            this.print.Text = "Просмотр и печать прихода";
-            this.print.UseVisualStyleBackColor = false;
-            // 
-            // printPlan
-            // 
-            this.printPlan.BackColor = System.Drawing.SystemColors.Control;
-            this.printPlan.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.printPlan.Name = "printPlan";
-            this.printPlan.Text = "Печать плана";
-            this.printPlan.UseVisualStyleBackColor = false;
-            this.show.BindingContext = this.BindingContext;
-            this.delete.BindingContext = this.BindingContext;
-            this.print.BindingContext = this.BindingContext;
-            this.printPlan.BindingContext = this.BindingContext;
         }
         
         /// 
@@ -196,15 +148,15 @@ namespace BedsPlan {
     
     internal sealed partial class Globals {
         
-        private static Plan _Plan;
+        private static PlanToPrint _PlanToPrint;
         
-        internal static Plan Plan {
+        internal static PlanToPrint PlanToPrint {
             get {
-                return _Plan;
+                return _PlanToPrint;
             }
             set {
-                if ((_Plan == null)) {
-                    _Plan = value;
+                if ((_PlanToPrint == null)) {
+                    _PlanToPrint = value;
                 }
                 else {
                     throw new System.NotSupportedException();
