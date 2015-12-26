@@ -20,6 +20,8 @@ namespace BedsPlan {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "14.0.0.0")]
         private global::System.Object missing = global::System.Type.Missing;
         
+        internal Microsoft.Office.Tools.Excel.Controls.Button print;
+        
         /// 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
@@ -129,6 +131,7 @@ namespace BedsPlan {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "14.0.0.0")]
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
         private void InitializeControls() {
+            this.print = new Microsoft.Office.Tools.Excel.Controls.Button(Globals.Factory, this.ItemProvider, this.HostContext, "153B24F7E169C7144FB1843010F77CAD9B18D1", "153B24F7E169C7144FB1843010F77CAD9B18D1", this, "print");
         }
         
         /// 
@@ -136,6 +139,18 @@ namespace BedsPlan {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "14.0.0.0")]
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
         private void InitializeComponents() {
+            // 
+            // print
+            // 
+            this.print.BackColor = System.Drawing.SystemColors.Control;
+            this.print.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.print.Name = "print";
+            this.print.Text = "Просмотр и печать прихода";
+            this.print.UseVisualStyleBackColor = false;
+            // 
+            // PlanToPrint
+            // 
+            this.print.BindingContext = this.BindingContext;
         }
         
         /// 

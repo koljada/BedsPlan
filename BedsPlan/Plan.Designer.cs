@@ -24,8 +24,6 @@ namespace BedsPlan {
         
         internal Microsoft.Office.Tools.Excel.Controls.Button delete;
         
-        internal Microsoft.Office.Tools.Excel.Controls.Button print;
-        
         internal Microsoft.Office.Tools.Excel.Controls.Button printPlan;
         
         /// 
@@ -139,7 +137,6 @@ namespace BedsPlan {
         private void InitializeControls() {
             this.show = new Microsoft.Office.Tools.Excel.Controls.Button(Globals.Factory, this.ItemProvider, this.HostContext, "1F0C583D81DEED142B9198CA1311A549F9BB31", "1F0C583D81DEED142B9198CA1311A549F9BB31", this, "show");
             this.delete = new Microsoft.Office.Tools.Excel.Controls.Button(Globals.Factory, this.ItemProvider, this.HostContext, "2D2196ED029D562476C28D4D2E3FA832FB6352", "2D2196ED029D562476C28D4D2E3FA832FB6352", this, "delete");
-            this.print = new Microsoft.Office.Tools.Excel.Controls.Button(Globals.Factory, this.ItemProvider, this.HostContext, "36B26063B3EBEA3459D3B8BD3D48F181BF1D33", "36B26063B3EBEA3459D3B8BD3D48F181BF1D33", this, "print");
             this.printPlan = new Microsoft.Office.Tools.Excel.Controls.Button(Globals.Factory, this.ItemProvider, this.HostContext, "4A5B185774D4C644D5B49C69418967FF8CC444", "4A5B185774D4C644D5B49C69418967FF8CC444", this, "printPlan");
         }
         
@@ -165,14 +162,6 @@ namespace BedsPlan {
             this.delete.Text = "Очистить";
             this.delete.UseVisualStyleBackColor = false;
             // 
-            // print
-            // 
-            this.print.BackColor = System.Drawing.SystemColors.Control;
-            this.print.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.print.Name = "print";
-            this.print.Text = "Просмотр и печать прихода";
-            this.print.UseVisualStyleBackColor = false;
-            // 
             // printPlan
             // 
             this.printPlan.BackColor = System.Drawing.SystemColors.Control;
@@ -182,7 +171,6 @@ namespace BedsPlan {
             this.printPlan.UseVisualStyleBackColor = false;
             this.show.BindingContext = this.BindingContext;
             this.delete.BindingContext = this.BindingContext;
-            this.print.BindingContext = this.BindingContext;
             this.printPlan.BindingContext = this.BindingContext;
         }
         
