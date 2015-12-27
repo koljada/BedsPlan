@@ -52,13 +52,13 @@ namespace BedsPlan
                 //    Range["A" + i + ":N" + (i + 19)].Cells.ClearContents();
                 //}
                 Range["A3:N1500"].Cells.Clear();
-                Globals.PlanToPrint.Range["A3:N999"].Cells.Clear();
+                Globals.PlanToPrint.Range["A5:N999"].Cells.Clear();
             }
         }
 
         private void printPlan_Click(object sender, EventArgs e)
         {
-            int count = 3;
+            int count = 5;
             foreach (Range item in UsedRange.Rows)
             {
                 if (!string.IsNullOrEmpty(item.Cells[1, 3].Text))
