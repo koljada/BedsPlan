@@ -62,7 +62,7 @@ namespace BedsPlan
             colors.Items.AddRange(Colors);
             //colors.SelectedIndex = 1;
 
-            BedHeads = Globals.Beds.Cells[row,9].Text.Split(',');
+            BedHeads = Globals.Beds.Cells[row, 9].Text.Split(',');
             bedheads.Items.AddRange(BedHeads);
             bedheads.Visible = BedHeads.Any(x => !string.IsNullOrEmpty(x));
             labelBedHead.Visible = bedheads.Visible;
@@ -120,10 +120,10 @@ namespace BedsPlan
             Globals.Plan.Cells[last, 8] = hasDivider.Checked ? Globals.Beds.Cells[1, 6].Text.Trim() : "0";
             Globals.Plan.Cells[last, 6] = hasLamel.Checked ? Globals.Beds.Cells[1, 7].Text.Trim() : "0";
             Globals.Plan.Cells[last, 9] = bedheads.Text.Trim();
-            Globals.Plan.Cells[last, 10] =decorations.Text.Trim();
+            Globals.Plan.Cells[last, 10] = decorations.Text.Trim();
             Globals.Plan.Cells[last, 11] = conditions.Text;
             Globals.Plan.Cells[last, 12] = deadline.Value.Date;
-            Globals.Plan.Cells[last, 12].NumberFormat = "DD.MM.YY";
+            //Globals.Plan.Cells[last, 12].NumberFormat = "dd.mm.yyyy";
             Globals.Plan.Cells[last, 15] = responsible.Text.Trim();
             //responsible.Controls.OfType<RadioButton>().FirstOrDefault(x => x.Checked).Text;
             Globals.Plan.Cells[(row + 1) * perModel + 2, 3] = "Сумма";
