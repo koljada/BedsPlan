@@ -1,13 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Windows.Forms;
 using Microsoft.Office.Interop.Excel;
-using System.Text;
-using System.Resources;
-using System.Reflection;
-using Number2Words;
-using System.Data;
 
 namespace BedsPlan
 {
@@ -51,8 +44,8 @@ namespace BedsPlan
                 //{
                 //    Range["A" + i + ":N" + (i + 19)].Cells.ClearContents();
                 //}
-                Range["A3:N1500"].Cells.Clear();
-                Globals.PlanToPrint.Range["A5:N999"].Cells.Clear();
+                Range["A3:P1500"].Cells.Clear();
+                Globals.PlanToPrint.Range["A5:P999"].Cells.Clear();
             }
         }
 
@@ -63,7 +56,7 @@ namespace BedsPlan
             {
                 if (!string.IsNullOrEmpty(item.Cells[1, 3].Text))
                 {
-                    var copyTo = Globals.PlanToPrint.Range["A" + count + ":N" + count];
+                    var copyTo = Globals.PlanToPrint.Range["A" + count + ":P" + count];
                     item.Copy(copyTo);
                     Globals.PlanToPrint.Cells[count, 4] = item.Cells[1, 4].Text;
                     count++;

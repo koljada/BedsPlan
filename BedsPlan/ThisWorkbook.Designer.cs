@@ -8,52 +8,40 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-using System;
-using System.CodeDom.Compiler;
-using System.ComponentModel;
-using System.Diagnostics;
-using System.Security.Permissions;
-using Microsoft.Office.Interop.Excel;
-using Microsoft.Office.Tools;
-using Microsoft.Office.Tools.Excel;
-using Microsoft.Office.Tools.Ribbon;
-using Microsoft.VisualStudio.Tools.Applications.Runtime;
-using Factory = Microsoft.Office.Tools.Excel.Factory;
-
 #pragma warning disable 414
 namespace BedsPlan {
     
     
     /// 
-    [StartupObject(0)]
-    [PermissionSet(SecurityAction.Demand, Name="FullTrust")]
-    public sealed partial class ThisWorkbook : WorkbookBase {
+    [Microsoft.VisualStudio.Tools.Applications.Runtime.StartupObjectAttribute(0)]
+    [global::System.Security.Permissions.PermissionSetAttribute(global::System.Security.Permissions.SecurityAction.Demand, Name="FullTrust")]
+    public sealed partial class ThisWorkbook : Microsoft.Office.Tools.Excel.WorkbookBase {
         
-        internal ActionsPane ActionsPane;
+        internal Microsoft.Office.Tools.ActionsPane ActionsPane;
         
-        [GeneratedCode("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "14.0.0.0")]
-        private Object missing = Type.Missing;
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "14.0.0.0")]
+        private global::System.Object missing = global::System.Type.Missing;
         
-        [GeneratedCode("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "14.0.0.0")]
-        internal Application ThisApplication;
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "14.0.0.0")]
+        internal Microsoft.Office.Interop.Excel.Application ThisApplication;
         
         /// 
-        [DebuggerNonUserCode()]
-        [EditorBrowsable(EditorBrowsableState.Never)]
-        public ThisWorkbook(Factory factory, IServiceProvider serviceProvider) : 
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
+        public ThisWorkbook(global::Microsoft.Office.Tools.Excel.Factory factory, global::System.IServiceProvider serviceProvider) : 
                 base(factory, serviceProvider, "ThisWorkbook", "ThisWorkbook") {
             Globals.Factory = factory;
         }
         
         /// 
-        [DebuggerNonUserCode()]
-        [GeneratedCode("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "14.0.0.0")]
-        [EditorBrowsable(EditorBrowsableState.Never)]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "14.0.0.0")]
+        [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
         protected override void Initialize() {
             base.Initialize();
-            this.ThisApplication = this.GetHostItem<Application>(typeof(Application), "Application");
+            this.ThisApplication = this.GetHostItem<Microsoft.Office.Interop.Excel.Application>(typeof(Microsoft.Office.Interop.Excel.Application), "Application");
             Globals.ThisWorkbook = this;
-            System.Windows.Forms.Application.EnableVisualStyles();
+            global::System.Windows.Forms.Application.EnableVisualStyles();
             this.InitializeCachedData();
             this.InitializeControls();
             this.InitializeComponents();
@@ -61,18 +49,18 @@ namespace BedsPlan {
         }
         
         /// 
-        [DebuggerNonUserCode()]
-        [GeneratedCode("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "14.0.0.0")]
-        [EditorBrowsable(EditorBrowsableState.Never)]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "14.0.0.0")]
+        [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
         protected override void FinishInitialization() {
             this.InternalStartup();
             this.OnStartup();
         }
         
         /// 
-        [DebuggerNonUserCode()]
-        [GeneratedCode("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "14.0.0.0")]
-        [EditorBrowsable(EditorBrowsableState.Never)]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "14.0.0.0")]
+        [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
         protected override void InitializeDataBindings() {
             this.BeginInitialization();
             this.BindToData();
@@ -80,9 +68,9 @@ namespace BedsPlan {
         }
         
         /// 
-        [DebuggerNonUserCode()]
-        [GeneratedCode("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "14.0.0.0")]
-        [EditorBrowsable(EditorBrowsableState.Never)]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "14.0.0.0")]
+        [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
         private void InitializeCachedData() {
             if ((this.DataHost == null)) {
                 return;
@@ -93,84 +81,84 @@ namespace BedsPlan {
         }
         
         /// 
-        [DebuggerNonUserCode()]
-        [GeneratedCode("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "14.0.0.0")]
-        [EditorBrowsable(EditorBrowsableState.Never)]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "14.0.0.0")]
+        [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
         private void InitializeData() {
         }
         
         /// 
-        [DebuggerNonUserCode()]
-        [GeneratedCode("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "14.0.0.0")]
-        [EditorBrowsable(EditorBrowsableState.Never)]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "14.0.0.0")]
+        [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
         private void BindToData() {
         }
         
         /// 
-        [DebuggerNonUserCode()]
-        [EditorBrowsable(EditorBrowsableState.Advanced)]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         private void StartCaching(string MemberName) {
             this.DataHost.StartCaching(this, MemberName);
         }
         
         /// 
-        [DebuggerNonUserCode()]
-        [EditorBrowsable(EditorBrowsableState.Advanced)]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         private void StopCaching(string MemberName) {
             this.DataHost.StopCaching(this, MemberName);
         }
         
         /// 
-        [DebuggerNonUserCode()]
-        [EditorBrowsable(EditorBrowsableState.Advanced)]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         private bool IsCached(string MemberName) {
             return this.DataHost.IsCached(this, MemberName);
         }
         
         /// 
-        [DebuggerNonUserCode()]
-        [GeneratedCode("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "14.0.0.0")]
-        [EditorBrowsable(EditorBrowsableState.Never)]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "14.0.0.0")]
+        [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
         private void BeginInitialization() {
             this.BeginInit();
             this.ActionsPane.BeginInit();
         }
         
         /// 
-        [DebuggerNonUserCode()]
-        [GeneratedCode("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "14.0.0.0")]
-        [EditorBrowsable(EditorBrowsableState.Never)]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "14.0.0.0")]
+        [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
         private void EndInitialization() {
             this.ActionsPane.EndInit();
             this.EndInit();
         }
         
         /// 
-        [DebuggerNonUserCode()]
-        [GeneratedCode("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "14.0.0.0")]
-        [EditorBrowsable(EditorBrowsableState.Never)]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "14.0.0.0")]
+        [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
         private void InitializeControls() {
             this.ActionsPane = Globals.Factory.CreateActionsPane(null, null, "ActionsPane", "ActionsPane", this);
         }
         
         /// 
-        [DebuggerNonUserCode()]
-        [GeneratedCode("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "14.0.0.0")]
-        [EditorBrowsable(EditorBrowsableState.Never)]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "14.0.0.0")]
+        [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
         private void InitializeComponents() {
         }
         
         /// 
-        [DebuggerNonUserCode()]
-        [EditorBrowsable(EditorBrowsableState.Advanced)]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         private bool NeedsFill(string MemberName) {
             return this.DataHost.NeedsFill(this, MemberName);
         }
         
         /// 
-        [DebuggerNonUserCode()]
-        [GeneratedCode("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "14.0.0.0")]
-        [EditorBrowsable(EditorBrowsableState.Never)]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "14.0.0.0")]
+        [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
         protected override void OnShutdown() {
             this.ActionsPane.Dispose();
             base.OnShutdown();
@@ -178,8 +166,8 @@ namespace BedsPlan {
     }
     
     /// 
-    [DebuggerNonUserCode()]
-    [GeneratedCode("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "14.0.0.0")]
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "14.0.0.0")]
     internal sealed partial class Globals {
         
         /// 
@@ -188,7 +176,7 @@ namespace BedsPlan {
         
         private static ThisWorkbook _ThisWorkbook;
         
-        private static Factory _factory;
+        private static global::Microsoft.Office.Tools.Excel.Factory _factory;
         
         private static ThisRibbonCollection _ThisRibbonCollection;
         
@@ -201,12 +189,12 @@ namespace BedsPlan {
                     _ThisWorkbook = value;
                 }
                 else {
-                    throw new NotSupportedException();
+                    throw new System.NotSupportedException();
                 }
             }
         }
         
-        internal static Factory Factory {
+        internal static global::Microsoft.Office.Tools.Excel.Factory Factory {
             get {
                 return _factory;
             }
@@ -215,7 +203,7 @@ namespace BedsPlan {
                     _factory = value;
                 }
                 else {
-                    throw new NotSupportedException();
+                    throw new System.NotSupportedException();
                 }
             }
         }
@@ -231,12 +219,12 @@ namespace BedsPlan {
     }
     
     /// 
-    [DebuggerNonUserCode()]
-    [GeneratedCode("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "14.0.0.0")]
-    internal sealed partial class ThisRibbonCollection : RibbonCollectionBase {
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "14.0.0.0")]
+    internal sealed partial class ThisRibbonCollection : Microsoft.Office.Tools.Ribbon.RibbonCollectionBase {
         
         /// 
-        internal ThisRibbonCollection(RibbonFactory factory) : 
+        internal ThisRibbonCollection(global::Microsoft.Office.Tools.Ribbon.RibbonFactory factory) : 
                 base(factory) {
         }
     }

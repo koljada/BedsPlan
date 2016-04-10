@@ -1,25 +1,18 @@
-﻿using System;
+﻿using BedsPlan.NumberConverter;
+using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Linq;
-using System.Text;
-using System.Windows.Forms;
-using System.Xml.Linq;
-using Microsoft.Office.Tools.Excel;
-using Microsoft.VisualStudio.Tools.Applications.Runtime;
 using Excel = Microsoft.Office.Interop.Excel;
-using Office = Microsoft.Office.Core;
-using Number2Words;
 
 namespace BedsPlan
 {
     public partial class PlanToPrint
     {
-        private void Лист5_Startup(object sender, System.EventArgs e)
+        private void Лист5_Startup(object sender, EventArgs e)
         {
         }
 
-        private void Лист5_Shutdown(object sender, System.EventArgs e)
+        private void Лист5_Shutdown(object sender, EventArgs e)
         {
         }
 
@@ -46,7 +39,7 @@ namespace BedsPlan
             Globals.Result.Range["A1:I999"].Cells.Clear();
             foreach (Excel.Range row in UsedRange.Rows)
             {
-                if (!string.IsNullOrEmpty(row.Cells[1, 12].Text) && row.Cells[1, 14].Text != "№ прихода")
+                if (row.Row > 5 && !string.IsNullOrEmpty(row.Cells[1, 14].Text))
                 {
                     Bed bed = Bed.Convert(row);
                     beds.Add(bed);
@@ -68,6 +61,7 @@ namespace BedsPlan
                 d.Cells[19, 7].Formula = "=SUM(G" + (rowNumber + 7) + ":G" + (rowNumber + 17) + ")";
                 this.Evaluate(d.Cells[19, 7]);
                 string sum = d.Cells[19, 7].Text;
+                //d.Cells[19, 2] = "";
                 d.Cells[19, 2] = RussianNumberToWordsConverter.Convert(int.Parse(sum), GrammaticalGender.Feminine);
             }
             Globals.Result.Activate();

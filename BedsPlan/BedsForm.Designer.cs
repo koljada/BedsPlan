@@ -38,10 +38,6 @@ namespace BedsPlan
             this.add = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.deadline = new System.Windows.Forms.DateTimePicker();
-            this.responsible = new System.Windows.Forms.GroupBox();
-            this.radioButton8 = new System.Windows.Forms.RadioButton();
-            this.radioButton7 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.conditions = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.colors = new System.Windows.Forms.ComboBox();
@@ -54,8 +50,13 @@ namespace BedsPlan
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.exit = new System.Windows.Forms.Button();
+            this.bedheads = new System.Windows.Forms.ComboBox();
+            this.labelBedHead = new System.Windows.Forms.Label();
+            this.responsible = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.labelDecoration = new System.Windows.Forms.Label();
+            this.decorations = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.count)).BeginInit();
-            this.responsible.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -114,7 +115,7 @@ namespace BedsPlan
             // 
             // add
             // 
-            this.add.Location = new System.Drawing.Point(35, 382);
+            this.add.Location = new System.Drawing.Point(36, 418);
             this.add.Margin = new System.Windows.Forms.Padding(4);
             this.add.Name = "add";
             this.add.Size = new System.Drawing.Size(177, 56);
@@ -126,7 +127,7 @@ namespace BedsPlan
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(256, 197);
+            this.label8.Location = new System.Drawing.Point(255, 299);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(40, 17);
@@ -135,66 +136,15 @@ namespace BedsPlan
             // 
             // deadline
             // 
-            this.deadline.Location = new System.Drawing.Point(260, 220);
+            this.deadline.Location = new System.Drawing.Point(259, 322);
             this.deadline.Margin = new System.Windows.Forms.Padding(4);
             this.deadline.Name = "deadline";
             this.deadline.Size = new System.Drawing.Size(159, 23);
             this.deadline.TabIndex = 44;
             // 
-            // responsible
-            // 
-            this.responsible.Controls.Add(this.radioButton8);
-            this.responsible.Controls.Add(this.radioButton7);
-            this.responsible.Controls.Add(this.radioButton1);
-            this.responsible.Location = new System.Drawing.Point(37, 254);
-            this.responsible.Margin = new System.Windows.Forms.Padding(4);
-            this.responsible.Name = "responsible";
-            this.responsible.Padding = new System.Windows.Forms.Padding(4);
-            this.responsible.Size = new System.Drawing.Size(382, 61);
-            this.responsible.TabIndex = 41;
-            this.responsible.TabStop = false;
-            this.responsible.Text = "Ответственный";
-            // 
-            // radioButton8
-            // 
-            this.radioButton8.AutoSize = true;
-            this.radioButton8.Location = new System.Drawing.Point(18, 24);
-            this.radioButton8.Margin = new System.Windows.Forms.Padding(4);
-            this.radioButton8.Name = "radioButton8";
-            this.radioButton8.Size = new System.Drawing.Size(79, 21);
-            this.radioButton8.TabIndex = 2;
-            this.radioButton8.TabStop = true;
-            this.radioButton8.Text = "Евгений";
-            this.radioButton8.UseVisualStyleBackColor = true;
-            // 
-            // radioButton7
-            // 
-            this.radioButton7.AutoSize = true;
-            this.radioButton7.Location = new System.Drawing.Point(116, 24);
-            this.radioButton7.Margin = new System.Windows.Forms.Padding(4);
-            this.radioButton7.Name = "radioButton7";
-            this.radioButton7.Size = new System.Drawing.Size(59, 21);
-            this.radioButton7.TabIndex = 1;
-            this.radioButton7.TabStop = true;
-            this.radioButton7.Text = "Алла";
-            this.radioButton7.UseVisualStyleBackColor = true;
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Checked = true;
-            this.radioButton1.Location = new System.Drawing.Point(222, 24);
-            this.radioButton1.Margin = new System.Windows.Forms.Padding(4);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(97, 21);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Александр";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
             // conditions
             // 
-            this.conditions.Location = new System.Drawing.Point(36, 340);
+            this.conditions.Location = new System.Drawing.Point(37, 376);
             this.conditions.Margin = new System.Windows.Forms.Padding(4);
             this.conditions.Name = "conditions";
             this.conditions.Size = new System.Drawing.Size(383, 23);
@@ -203,7 +153,7 @@ namespace BedsPlan
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(32, 319);
+            this.label6.Location = new System.Drawing.Point(33, 355);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(180, 17);
@@ -276,6 +226,7 @@ namespace BedsPlan
             this.label4.Location = new System.Drawing.Point(39, 197);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
+            this.label4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label4.Size = new System.Drawing.Size(41, 17);
             this.label4.TabIndex = 32;
             this.label4.Text = "Цвет";
@@ -283,7 +234,7 @@ namespace BedsPlan
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(33, 145);
+            this.label3.Location = new System.Drawing.Point(37, 143);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(59, 17);
@@ -302,7 +253,7 @@ namespace BedsPlan
             // 
             // exit
             // 
-            this.exit.Location = new System.Drawing.Point(242, 381);
+            this.exit.Location = new System.Drawing.Point(243, 417);
             this.exit.Margin = new System.Windows.Forms.Padding(4);
             this.exit.Name = "exit";
             this.exit.Size = new System.Drawing.Size(177, 56);
@@ -311,11 +262,77 @@ namespace BedsPlan
             this.exit.UseVisualStyleBackColor = true;
             this.exit.Click += new System.EventHandler(this.exit_Click);
             // 
+            // bedheads
+            // 
+            this.bedheads.FormattingEnabled = true;
+            this.bedheads.Location = new System.Drawing.Point(37, 268);
+            this.bedheads.Margin = new System.Windows.Forms.Padding(4);
+            this.bedheads.Name = "bedheads";
+            this.bedheads.Size = new System.Drawing.Size(160, 25);
+            this.bedheads.TabIndex = 57;
+            // 
+            // labelBedHead
+            // 
+            this.labelBedHead.AutoSize = true;
+            this.labelBedHead.Location = new System.Drawing.Point(39, 247);
+            this.labelBedHead.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelBedHead.Name = "labelBedHead";
+            this.labelBedHead.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.labelBedHead.Size = new System.Drawing.Size(76, 17);
+            this.labelBedHead.TabIndex = 56;
+            this.labelBedHead.Text = "Изголовье";
+            // 
+            // responsible
+            // 
+            this.responsible.FormattingEnabled = true;
+            this.responsible.Location = new System.Drawing.Point(37, 320);
+            this.responsible.Margin = new System.Windows.Forms.Padding(4);
+            this.responsible.Name = "responsible";
+            this.responsible.Size = new System.Drawing.Size(160, 25);
+            this.responsible.TabIndex = 61;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(39, 299);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label5.Size = new System.Drawing.Size(111, 17);
+            this.label5.TabIndex = 60;
+            this.label5.Text = "Ответственный";
+            // 
+            // labelDecoration
+            // 
+            this.labelDecoration.AutoSize = true;
+            this.labelDecoration.Location = new System.Drawing.Point(262, 197);
+            this.labelDecoration.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelDecoration.Name = "labelDecoration";
+            this.labelDecoration.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.labelDecoration.Size = new System.Drawing.Size(97, 17);
+            this.labelDecoration.TabIndex = 58;
+            this.labelDecoration.Text = "Доп. отделка";
+            // 
+            // decorations
+            // 
+            this.decorations.FormattingEnabled = true;
+            this.decorations.Location = new System.Drawing.Point(260, 218);
+            this.decorations.Margin = new System.Windows.Forms.Padding(4);
+            this.decorations.Name = "decorations";
+            this.decorations.Size = new System.Drawing.Size(160, 25);
+            this.decorations.TabIndex = 59;
+            // 
             // BedsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(461, 450);
+            this.ClientSize = new System.Drawing.Size(461, 479);
+            this.Controls.Add(this.responsible);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.decorations);
+            this.Controls.Add(this.labelDecoration);
+            this.Controls.Add(this.bedheads);
+            this.Controls.Add(this.labelBedHead);
             this.Controls.Add(this.exit);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.model);
@@ -324,7 +341,6 @@ namespace BedsPlan
             this.Controls.Add(this.add);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.deadline);
-            this.Controls.Add(this.responsible);
             this.Controls.Add(this.conditions);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.colors);
@@ -342,8 +358,6 @@ namespace BedsPlan
             this.ShowIcon = false;
             this.Text = "План производства";
             ((System.ComponentModel.ISupportInitialize)(this.count)).EndInit();
-            this.responsible.ResumeLayout(false);
-            this.responsible.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -358,10 +372,6 @@ namespace BedsPlan
         private Button add;
         private Label label8;
         private DateTimePicker deadline;
-        private GroupBox responsible;
-        private RadioButton radioButton8;
-        private RadioButton radioButton7;
-        private RadioButton radioButton1;
         private TextBox conditions;
         private Label label6;
         private ComboBox colors;
@@ -374,5 +384,11 @@ namespace BedsPlan
         private Label label3;
         private Label label2;
         private Button exit;
+        private ComboBox bedheads;
+        private Label labelBedHead;
+        private ComboBox responsible;
+        private Label label5;
+        private Label labelDecoration;
+        private ComboBox decorations;
     }
 }

@@ -27,6 +27,8 @@ namespace BedsPlan
         public string MadeDate { get; set; }
         public DateTime DueDate { get; set; }
         public string Responsible { get; set; }
+        public string Decoration { get; set; }
+        public string BedHead { get; set; }
         public int Number { get; set; }
 
         public override string ToString()
@@ -43,6 +45,10 @@ namespace BedsPlan
                 res.AppendFormat(" {0} ", Div);
             if (HasLam)
                 res.AppendFormat(" {0} ", Lam);
+            if (!string.IsNullOrEmpty(BedHead))
+                res.AppendFormat(" {0} ", BedHead);
+            if (!string.IsNullOrEmpty(Decoration))
+                res.AppendFormat(" {0} ", Decoration);
             return res.ToString();
         }
 
@@ -55,14 +61,16 @@ namespace BedsPlan
                 Height = row.Cells[1, 3].Value,
                 Count = (int)(row.Cells[1, 4].Value),
                 Color = rm.GetString(row.Cells[1, 5].Text.Trim()),
-                Box = row.Cells[1, 6].Text,
-                Div = row.Cells[1, 7].Text,
-                Lam = row.Cells[1, 8].Text,
-                Condition = row.Cells[1, 9].Text,
-                DueDate = row.Cells[1, 10].Value,
-                MadeDate = row.Cells[1, 11].Text,
-                TransferDate = row.Cells[1, 12].Text.Trim(),
-                Responsible = row.Cells[1, 13].Text
+                Box = row.Cells[1, 7].Text,
+                Div = row.Cells[1, 8].Text,
+                Lam = row.Cells[1, 6].Text,
+                BedHead= row.Cells[1, 9].Text,
+                Decoration= row.Cells[1, 10].Text,
+                Condition = row.Cells[1, 11].Text,
+                DueDate = row.Cells[1, 12].Value,
+                MadeDate = row.Cells[1, 13].Text,
+                TransferDate = row.Cells[1, 14].Text.Trim(),
+                Responsible = row.Cells[1, 15].Text
             };
         }
 
