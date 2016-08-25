@@ -7,12 +7,15 @@ namespace BedsPlan
 {
     public partial class BedsForm : Form
     {
-        private readonly int perModel = 21;
+        private readonly int _perModel;
+        private readonly int _rowsToClear;
 
         public BedsForm()
         {
             InitializeComponent();
             GetModels();
+            _perModel = int.TryParse(Globals.Beds.Cells[1, 3].Text, out _perModel) ? _perModel : 22;
+            _rowsToClear = int.TryParse(Globals.Beds.Cells[1, 4].Text, out _rowsToClear) ? _rowsToClear : 2001;
         }
 
         public string[] Models { get; set; }
@@ -108,9 +111,9 @@ namespace BedsPlan
                 return;
             }
 
-            var range = "A" + (row * perModel + 3) + ":A" + ((row + 1) * perModel + 2);
+            var range = "A" + (row * _perModel + 3) + ":A" + ((row + 1) * _perModel + 2);
             var used = (Globals.Plan.Range[range].Cells.Value as Array).OfType<object>().Count();
-            var last = row * perModel + used + 3;
+            var last = row * _perModel + used + 3;
             Globals.Plan.Cells[last, 1] = model;
             Globals.Plan.Cells[last, 2] = int.Parse(widths.Text);
             Globals.Plan.Cells[last, 3] = int.Parse(heights.Text);
@@ -126,11 +129,11 @@ namespace BedsPlan
             //Globals.Plan.Cells[last, 12].NumberFormat = "dd.mm.yyyy";
             Globals.Plan.Cells[last, 15] = responsible.Text.Trim();
             //responsible.Controls.OfType<RadioButton>().FirstOrDefault(x => x.Checked).Text;
-            Globals.Plan.Cells[(row + 1) * perModel + 2, 3] = "Сумма";
-            Globals.Plan.Cells[(row + 1) * perModel + 2, 3].Borders.Weight = XlBorderWeight.xlMedium;
-            Globals.Plan.Cells[(row + 1) * perModel + 2, 4].Formula = "=SUM(D" + (row * perModel + 3) + ":D" +
-                                                                    ((row + 1) * perModel + 1) + ")";
-            Globals.Plan.Cells[(row + 1) * perModel + 2, 4].Borders.Weight = XlBorderWeight.xlMedium;
+            Globals.Plan.Cells[(row + 1) * _perModel + 2, 3] = "Сумма";
+            Globals.Plan.Cells[(row + 1) * _perModel + 2, 3].Borders.Weight = XlBorderWeight.xlMedium;
+            Globals.Plan.Cells[(row + 1) * _perModel + 2, 4].Formula = "=SUM(D" + (row * _perModel + 3) + ":D" +
+                                                                    ((row + 1) * _perModel + 1) + ")";
+            Globals.Plan.Cells[(row + 1) * _perModel + 2, 4].Borders.Weight = XlBorderWeight.xlMedium;
             Globals.Plan.Activate();
             Globals.ThisWorkbook.Save();
             widths.SelectedIndex = -1;

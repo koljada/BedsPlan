@@ -37,14 +37,13 @@ namespace BedsPlan
 
         private void delete_Click(object sender, EventArgs e)
         {
+            int rowsToClear = int.TryParse(Globals.Beds.Cells[1, 4].Text, out rowsToClear) ? rowsToClear : 2000;
+            rowsToClear += 2;
             var btn = MessageBoxButtons.YesNo;
             if (MessageBox.Show("Очистить данные?", "Предупреждение", btn) == DialogResult.Yes)
             {
-                //for (var i = 3; i < 1500; i += 21)
-                //{
-                //    Range["A" + i + ":N" + (i + 19)].Cells.ClearContents();
-                //}
-                Range["A3:P1500"].Cells.Clear();
+                string range = "A3:P" + rowsToClear.ToString();
+                Range[range].Cells.Clear();
                 Globals.PlanToPrint.Range["A5:P999"].Cells.Clear();
             }
         }
